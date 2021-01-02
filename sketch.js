@@ -19,7 +19,7 @@ function get_scores(callback) {
     .then(function(response) {
         //  If the response isn't OK
       if (response.status !== 200) {
-        Errors.innerHTML = response.status;
+        console.log(response.status)
       }
       // If the response is OK
       response.json().then(function(data) {
