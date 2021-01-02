@@ -85,19 +85,6 @@ class Button {
     }
   }
   
-  changeeText(text) {
-    this.string = text
-    this.bounds = font.textBounds(this.string, x, y, size);
-    this.bounds.y += this.bounds.h
-    
-    if (this.centerX) {
-      this.bounds.x -= this.bounds.w/2
-    }
-    if (this.centerY) {
-      this.bounds.y -= this.bounds.h/2
-    }
-  }
-  
   update() {
     if (mouseIsPressed && !this.hidden) {
       if (mouseX >= this.bounds.x - this.padding && mouseX <= this.bounds.x + this.bounds.w + this.padding && mouseY >= this.bounds.y - this.padding && mouseY <= this.bounds.y + this.bounds.h + this.padding) {
